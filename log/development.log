@@ -2564,3 +2564,219 @@ Migrating to CreateTodoItems (20160310053320)
   [1m[36mTodoList Load (0.2ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC[0m
   [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC
   [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles"[0m
+  [1m[36mUser Load (11.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTodoList Load (0.2ms)[0m  SELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC
+  [1m[36mTodoItem Load (0.2ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC[0m
+  [1m[35mProfile Load (0.2ms)[0m  SELECT "profiles".* FROM "profiles"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "testUser"], ["password_digest", "xxxx"], ["created_at", "2016-03-10 08:01:23.728024"], ["updated_at", "2016-03-10 08:01:23.728024"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 53], ["gender", "male"], ["birth_year", 1989], ["first_name", "User 0"], ["last_name", "Smith0"], ["created_at", "2016-03-10 08:01:23.743966"], ["updated_at", "2016-03-10 08:01:23.743966"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 53], ["gender", "male"], ["birth_year", 1965], ["first_name", "User 1"], ["last_name", "Smith1"], ["created_at", "2016-03-10 08:01:23.748547"], ["updated_at", "2016-03-10 08:01:23.748547"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 53], ["gender", "male"], ["birth_year", 1963], ["first_name", "User 2"], ["last_name", "Smith2"], ["created_at", "2016-03-10 08:01:23.753027"], ["updated_at", "2016-03-10 08:01:23.753027"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 53], ["gender", "male"], ["birth_year", 1980], ["first_name", "User 3"], ["last_name", "Smith3"], ["created_at", "2016-03-10 08:01:23.756673"], ["updated_at", "2016-03-10 08:01:23.756673"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 53], ["gender", "male"], ["birth_year", 1988], ["first_name", "User 4"], ["last_name", "Smith4"], ["created_at", "2016-03-10 08:01:23.759767"], ["updated_at", "2016-03-10 08:01:23.759767"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 53], ["gender", "male"], ["birth_year", 1966], ["first_name", "User 5"], ["last_name", "Smith5"], ["created_at", "2016-03-10 08:01:23.762567"], ["updated_at", "2016-03-10 08:01:23.762567"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 53], ["gender", "male"], ["birth_year", 1988], ["first_name", "User 6"], ["last_name", "Smith6"], ["created_at", "2016-03-10 08:01:23.765954"], ["updated_at", "2016-03-10 08:01:23.765954"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 53], ["gender", "male"], ["birth_year", 1990], ["first_name", "User 7"], ["last_name", "Smith7"], ["created_at", "2016-03-10 08:01:23.769473"], ["updated_at", "2016-03-10 08:01:23.769473"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 53], ["gender", "male"], ["birth_year", 1974], ["first_name", "User 8"], ["last_name", "Smith8"], ["created_at", "2016-03-10 08:01:23.772588"], ["updated_at", "2016-03-10 08:01:23.772588"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 53], ["gender", "male"], ["birth_year", 1986], ["first_name", "User 9"], ["last_name", "Smith9"], ["created_at", "2016-03-10 08:01:23.775657"], ["updated_at", "2016-03-10 08:01:23.775657"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 53], ["gender", "male"], ["birth_year", 1976], ["first_name", "User 10"], ["last_name", "Smith10"], ["created_at", "2016-03-10 08:01:23.778774"], ["updated_at", "2016-03-10 08:01:23.778774"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 53], ["gender", "male"], ["birth_year", 1996], ["first_name", "User 11"], ["last_name", "Smith11"], ["created_at", "2016-03-10 08:01:23.781984"], ["updated_at", "2016-03-10 08:01:23.781984"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 53], ["gender", "male"], ["birth_year", 1970], ["first_name", "User 12"], ["last_name", "Smith12"], ["created_at", "2016-03-10 08:01:23.785120"], ["updated_at", "2016-03-10 08:01:23.785120"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 53], ["gender", "male"], ["birth_year", 1994], ["first_name", "User 13"], ["last_name", "Smith13"], ["created_at", "2016-03-10 08:01:23.788253"], ["updated_at", "2016-03-10 08:01:23.788253"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 53], ["gender", "male"], ["birth_year", 1993], ["first_name", "User 14"], ["last_name", "Smith14"], ["created_at", "2016-03-10 08:01:23.791693"], ["updated_at", "2016-03-10 08:01:23.791693"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 53], ["gender", "male"], ["birth_year", 2000], ["first_name", "User 15"], ["last_name", "Smith15"], ["created_at", "2016-03-10 08:01:23.794755"], ["updated_at", "2016-03-10 08:01:23.794755"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 53], ["gender", "male"], ["birth_year", 1968], ["first_name", "User 16"], ["last_name", "Smith16"], ["created_at", "2016-03-10 08:01:23.797963"], ["updated_at", "2016-03-10 08:01:23.797963"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 53], ["gender", "male"], ["birth_year", 1973], ["first_name", "User 17"], ["last_name", "Smith17"], ["created_at", "2016-03-10 08:01:23.801365"], ["updated_at", "2016-03-10 08:01:23.801365"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 53], ["gender", "male"], ["birth_year", 1988], ["first_name", "User 18"], ["last_name", "Smith18"], ["created_at", "2016-03-10 08:01:23.804628"], ["updated_at", "2016-03-10 08:01:23.804628"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 53], ["gender", "male"], ["birth_year", 1993], ["first_name", "User 19"], ["last_name", "Smith19"], ["created_at", "2016-03-10 08:01:23.808668"], ["updated_at", "2016-03-10 08:01:23.808668"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 53], ["gender", "male"], ["birth_year", 1975], ["first_name", "User 20"], ["last_name", "Smith20"], ["created_at", "2016-03-10 08:01:23.813327"], ["updated_at", "2016-03-10 08:01:23.813327"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE (birth_year BETWEEN 1960 AND 1985)[0m
+  [1m[36mUser Load (66.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 53]]
+  [1m[35mSQL (61.6ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 49]]
+  [1m[36mTodoList Load (0.2ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC[0m  [["user_id", 53]]
+  [1m[35mSQL (1.4ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 53]]
+  [1m[36m (6.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mTodoList Load (0.2ms)[0m  SELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC
+  [1m[36mTodoItem Load (0.3ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC[0m
+  [1m[35mProfile Load (0.2ms)[0m  SELECT "profiles".* FROM "profiles"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (38.8ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 50]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (17.1ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 51]]
+  [1m[35m (3.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 52]]
+  [1m[36m (3.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.2ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 53]]
+  [1m[35m (29.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.7ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 54]]
+  [1m[36m (41.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 55]]
+  [1m[35m (3.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (29.5ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 56]]
+  [1m[36m (4.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (90.9ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 57]]
+  [1m[35m (48.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.7ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 58]]
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.1ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 59]]
+  [1m[35m (27.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 60]]
+  [1m[36m (32.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.9ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 61]]
+  [1m[35m (60.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 62]]
+  [1m[36m (3.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.5ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 63]]
+  [1m[35m (3.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 64]]
+  [1m[36m (5.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.7ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 65]]
+  [1m[35m (4.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 66]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.2ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 67]]
+  [1m[35m (3.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.9ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 68]]
+  [1m[36m (38.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (12.6ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 69]]
+  [1m[35m (4.3ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (8.7ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "testUser"], ["password_digest", "xxxx"], ["created_at", "2016-03-10 08:02:33.387346"], ["updated_at", "2016-03-10 08:02:33.387346"]]
+  [1m[36m (4.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (33.0ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 54], ["gender", "male"], ["birth_year", 1996], ["first_name", "User 0"], ["last_name", "Smith0"], ["created_at", "2016-03-10 08:02:33.405576"], ["updated_at", "2016-03-10 08:02:33.405576"]]
+  [1m[35m (4.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.5ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 54], ["gender", "male"], ["birth_year", 1969], ["first_name", "User 1"], ["last_name", "Smith1"], ["created_at", "2016-03-10 08:02:33.447285"], ["updated_at", "2016-03-10 08:02:33.447285"]]
+  [1m[36m (5.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (8.9ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 54], ["gender", "male"], ["birth_year", 1962], ["first_name", "User 2"], ["last_name", "Smith2"], ["created_at", "2016-03-10 08:02:33.462228"], ["updated_at", "2016-03-10 08:02:33.462228"]]
+  [1m[35m (5.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (7.3ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 54], ["gender", "male"], ["birth_year", 1993], ["first_name", "User 3"], ["last_name", "Smith3"], ["created_at", "2016-03-10 08:02:33.482201"], ["updated_at", "2016-03-10 08:02:33.482201"]]
+  [1m[36m (5.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (5.8ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 54], ["gender", "male"], ["birth_year", 1974], ["first_name", "User 4"], ["last_name", "Smith4"], ["created_at", "2016-03-10 08:02:33.499797"], ["updated_at", "2016-03-10 08:02:33.499797"]]
+  [1m[35m (6.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.8ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 54], ["gender", "male"], ["birth_year", 1989], ["first_name", "User 5"], ["last_name", "Smith5"], ["created_at", "2016-03-10 08:02:33.516472"], ["updated_at", "2016-03-10 08:02:33.516472"]]
+  [1m[36m (5.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (4.9ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 54], ["gender", "male"], ["birth_year", 1971], ["first_name", "User 6"], ["last_name", "Smith6"], ["created_at", "2016-03-10 08:02:33.531009"], ["updated_at", "2016-03-10 08:02:33.531009"]]
+  [1m[35m (5.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.7ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 54], ["gender", "male"], ["birth_year", 1993], ["first_name", "User 7"], ["last_name", "Smith7"], ["created_at", "2016-03-10 08:02:33.544861"], ["updated_at", "2016-03-10 08:02:33.544861"]]
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (8.1ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 54], ["gender", "male"], ["birth_year", 1989], ["first_name", "User 8"], ["last_name", "Smith8"], ["created_at", "2016-03-10 08:02:33.560954"], ["updated_at", "2016-03-10 08:02:33.560954"]]
+  [1m[35m (4.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.2ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 54], ["gender", "male"], ["birth_year", 1979], ["first_name", "User 9"], ["last_name", "Smith9"], ["created_at", "2016-03-10 08:02:33.578370"], ["updated_at", "2016-03-10 08:02:33.578370"]]
+  [1m[36m (4.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.5ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 54], ["gender", "male"], ["birth_year", 1993], ["first_name", "User 10"], ["last_name", "Smith10"], ["created_at", "2016-03-10 08:02:33.590507"], ["updated_at", "2016-03-10 08:02:33.590507"]]
+  [1m[35m (5.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.9ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 54], ["gender", "male"], ["birth_year", 2000], ["first_name", "User 11"], ["last_name", "Smith11"], ["created_at", "2016-03-10 08:02:33.602406"], ["updated_at", "2016-03-10 08:02:33.602406"]]
+  [1m[36m (4.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.8ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 54], ["gender", "male"], ["birth_year", 1998], ["first_name", "User 12"], ["last_name", "Smith12"], ["created_at", "2016-03-10 08:02:33.613894"], ["updated_at", "2016-03-10 08:02:33.613894"]]
+  [1m[35m (4.3ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (140.7ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 54], ["gender", "male"], ["birth_year", 1998], ["first_name", "User 13"], ["last_name", "Smith13"], ["created_at", "2016-03-10 08:02:33.626345"], ["updated_at", "2016-03-10 08:02:33.626345"]]
+  [1m[36m (64.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (88.4ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 54], ["gender", "male"], ["birth_year", 1988], ["first_name", "User 14"], ["last_name", "Smith14"], ["created_at", "2016-03-10 08:02:33.843087"], ["updated_at", "2016-03-10 08:02:33.843087"]]
+  [1m[35m (58.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.4ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 54], ["gender", "male"], ["birth_year", 1965], ["first_name", "User 15"], ["last_name", "Smith15"], ["created_at", "2016-03-10 08:02:33.993933"], ["updated_at", "2016-03-10 08:02:33.993933"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 54], ["gender", "male"], ["birth_year", 1960], ["first_name", "User 16"], ["last_name", "Smith16"], ["created_at", "2016-03-10 08:02:34.005103"], ["updated_at", "2016-03-10 08:02:34.005103"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 54], ["gender", "male"], ["birth_year", 1978], ["first_name", "User 17"], ["last_name", "Smith17"], ["created_at", "2016-03-10 08:02:34.009383"], ["updated_at", "2016-03-10 08:02:34.009383"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 54], ["gender", "male"], ["birth_year", 1979], ["first_name", "User 18"], ["last_name", "Smith18"], ["created_at", "2016-03-10 08:02:34.013241"], ["updated_at", "2016-03-10 08:02:34.013241"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 54], ["gender", "male"], ["birth_year", 1979], ["first_name", "User 19"], ["last_name", "Smith19"], ["created_at", "2016-03-10 08:02:34.018129"], ["updated_at", "2016-03-10 08:02:34.018129"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 54], ["gender", "male"], ["birth_year", 1990], ["first_name", "User 20"], ["last_name", "Smith20"], ["created_at", "2016-03-10 08:02:34.022060"], ["updated_at", "2016-03-10 08:02:34.022060"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE (birth_year BETWEEN 1960 AND 1985)  ORDER BY "profiles"."birth_year" ASC[0m
