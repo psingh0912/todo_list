@@ -2780,3 +2780,1393 @@ Migrating to CreateTodoItems (20160310053320)
   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 54], ["gender", "male"], ["birth_year", 1990], ["first_name", "User 20"], ["last_name", "Smith20"], ["created_at", "2016-03-10 08:02:34.022060"], ["updated_at", "2016-03-10 08:02:34.022060"]]
   [1m[35m (1.5ms)[0m  commit transaction
   [1m[36mProfile Load (0.2ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE (birth_year BETWEEN 1960 AND 1985)  ORDER BY "profiles"."birth_year" ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 54]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 70]]
+  [1m[36mTodoList Load (0.2ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC[0m  [["user_id", 54]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 54]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mTodoList Load (0.2ms)[0m  SELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC[0m
+  [1m[35mProfile Load (0.2ms)[0m  SELECT "profiles".* FROM "profiles"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 71]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 72]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 73]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 74]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 75]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 76]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 77]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 78]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 79]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 80]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 81]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 82]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 83]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 84]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 85]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 86]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 87]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 88]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 89]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 90]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles"
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "Fiorina"], ["password_digest", "ylrac"], ["created_at", "2016-03-10 08:03:11.988298"], ["updated_at", "2016-03-10 08:03:11.988298"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["gender", "female"], ["birth_year", 1954], ["first_name", "Carly"], ["last_name", "Fiorina"], ["created_at", "2016-03-10 08:03:11.992131"], ["updated_at", "2016-03-10 08:03:11.992131"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 55]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "profiles" SET "user_id" = ?, "updated_at" = ? WHERE "profiles"."id" = ?[0m  [["user_id", 55], ["updated_at", "2016-03-10 08:03:11.996183"], ["id", 91]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "The Fiorina List"], ["list_due_date", "2017-03-10"], ["user_id", 55], ["created_at", "2016-03-10 08:03:12.005927"], ["updated_at", "2016-03-10 08:03:12.005927"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 1"], ["description", "This is task 1"], ["completed", "f"], ["todo_list_id", 72], ["created_at", "2016-03-10 08:03:12.013948"], ["updated_at", "2016-03-10 08:03:12.013948"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 2"], ["description", "This is task 2"], ["completed", "f"], ["todo_list_id", 72], ["created_at", "2016-03-10 08:03:12.018830"], ["updated_at", "2016-03-10 08:03:12.018830"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 3"], ["description", "This is task 3"], ["completed", "f"], ["todo_list_id", 72], ["created_at", "2016-03-10 08:03:12.023008"], ["updated_at", "2016-03-10 08:03:12.023008"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 4"], ["description", "This is task 4"], ["completed", "f"], ["todo_list_id", 72], ["created_at", "2016-03-10 08:03:12.027472"], ["updated_at", "2016-03-10 08:03:12.027472"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 5"], ["description", "This is task 5"], ["completed", "f"], ["todo_list_id", 72], ["created_at", "2016-03-10 08:03:12.031568"], ["updated_at", "2016-03-10 08:03:12.031568"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "Trump"], ["password_digest", "dlanod"], ["created_at", "2016-03-10 08:03:12.034837"], ["updated_at", "2016-03-10 08:03:12.034837"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["gender", "male"], ["birth_year", 1946], ["first_name", "Donald"], ["last_name", "Trump"], ["created_at", "2016-03-10 08:03:12.037687"], ["updated_at", "2016-03-10 08:03:12.037687"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 56]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "profiles" SET "user_id" = ?, "updated_at" = ? WHERE "profiles"."id" = ?[0m  [["user_id", 56], ["updated_at", "2016-03-10 08:03:12.041289"], ["id", 92]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "The Trump List"], ["list_due_date", "2017-03-10"], ["user_id", 56], ["created_at", "2016-03-10 08:03:12.045947"], ["updated_at", "2016-03-10 08:03:12.045947"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 1"], ["description", "This is task 1"], ["completed", "f"], ["todo_list_id", 73], ["created_at", "2016-03-10 08:03:12.050899"], ["updated_at", "2016-03-10 08:03:12.050899"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 2"], ["description", "This is task 2"], ["completed", "f"], ["todo_list_id", 73], ["created_at", "2016-03-10 08:03:12.055070"], ["updated_at", "2016-03-10 08:03:12.055070"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 3"], ["description", "This is task 3"], ["completed", "f"], ["todo_list_id", 73], ["created_at", "2016-03-10 08:03:12.060564"], ["updated_at", "2016-03-10 08:03:12.060564"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 4"], ["description", "This is task 4"], ["completed", "f"], ["todo_list_id", 73], ["created_at", "2016-03-10 08:03:12.064700"], ["updated_at", "2016-03-10 08:03:12.064700"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 5"], ["description", "This is task 5"], ["completed", "f"], ["todo_list_id", 73], ["created_at", "2016-03-10 08:03:12.068519"], ["updated_at", "2016-03-10 08:03:12.068519"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "Carson"], ["password_digest", "neb"], ["created_at", "2016-03-10 08:03:12.071673"], ["updated_at", "2016-03-10 08:03:12.071673"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["gender", "male"], ["birth_year", 1951], ["first_name", "Ben"], ["last_name", "Carson"], ["created_at", "2016-03-10 08:03:12.074981"], ["updated_at", "2016-03-10 08:03:12.074981"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 57]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "profiles" SET "user_id" = ?, "updated_at" = ? WHERE "profiles"."id" = ?[0m  [["user_id", 57], ["updated_at", "2016-03-10 08:03:12.079229"], ["id", 93]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "The Carson List"], ["list_due_date", "2017-03-10"], ["user_id", 57], ["created_at", "2016-03-10 08:03:12.084151"], ["updated_at", "2016-03-10 08:03:12.084151"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 1"], ["description", "This is task 1"], ["completed", "f"], ["todo_list_id", 74], ["created_at", "2016-03-10 08:03:12.089402"], ["updated_at", "2016-03-10 08:03:12.089402"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 2"], ["description", "This is task 2"], ["completed", "f"], ["todo_list_id", 74], ["created_at", "2016-03-10 08:03:12.093774"], ["updated_at", "2016-03-10 08:03:12.093774"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 3"], ["description", "This is task 3"], ["completed", "f"], ["todo_list_id", 74], ["created_at", "2016-03-10 08:03:12.098632"], ["updated_at", "2016-03-10 08:03:12.098632"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 4"], ["description", "This is task 4"], ["completed", "f"], ["todo_list_id", 74], ["created_at", "2016-03-10 08:03:12.103008"], ["updated_at", "2016-03-10 08:03:12.103008"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 5"], ["description", "This is task 5"], ["completed", "f"], ["todo_list_id", 74], ["created_at", "2016-03-10 08:03:12.107263"], ["updated_at", "2016-03-10 08:03:12.107263"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "Clinton"], ["password_digest", "yrallih"], ["created_at", "2016-03-10 08:03:12.111499"], ["updated_at", "2016-03-10 08:03:12.111499"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["gender", "female"], ["birth_year", 1947], ["first_name", "Hillary"], ["last_name", "Clinton"], ["created_at", "2016-03-10 08:03:12.114513"], ["updated_at", "2016-03-10 08:03:12.114513"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 58]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "profiles" SET "user_id" = ?, "updated_at" = ? WHERE "profiles"."id" = ?[0m  [["user_id", 58], ["updated_at", "2016-03-10 08:03:12.118090"], ["id", 94]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "The Clinton List"], ["list_due_date", "2017-03-10"], ["user_id", 58], ["created_at", "2016-03-10 08:03:12.121921"], ["updated_at", "2016-03-10 08:03:12.121921"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 1"], ["description", "This is task 1"], ["completed", "f"], ["todo_list_id", 75], ["created_at", "2016-03-10 08:03:12.126743"], ["updated_at", "2016-03-10 08:03:12.126743"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 2"], ["description", "This is task 2"], ["completed", "f"], ["todo_list_id", 75], ["created_at", "2016-03-10 08:03:12.131633"], ["updated_at", "2016-03-10 08:03:12.131633"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 3"], ["description", "This is task 3"], ["completed", "f"], ["todo_list_id", 75], ["created_at", "2016-03-10 08:03:12.136787"], ["updated_at", "2016-03-10 08:03:12.136787"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 4"], ["description", "This is task 4"], ["completed", "f"], ["todo_list_id", 75], ["created_at", "2016-03-10 08:03:12.141549"], ["updated_at", "2016-03-10 08:03:12.141549"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 5"], ["description", "This is task 5"], ["completed", "f"], ["todo_list_id", 75], ["created_at", "2016-03-10 08:03:12.149123"], ["updated_at", "2016-03-10 08:03:12.149123"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 55]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 91]]
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC[0m  [["user_id", 55]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC  [["todo_list_id", 72]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 265]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 266]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 267]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 268]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 269]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 72]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 55]]
+  [1m[35m (17.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 56]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 92]]
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC  [["user_id", 56]]
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 73]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 270]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 271]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 272]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 273]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 274]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?[0m  [["id", 73]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 56]]
+  [1m[36m (65.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 57]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 93]]
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC[0m  [["user_id", 57]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC  [["todo_list_id", 74]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 275]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 276]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 277]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 278]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 279]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 74]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 57]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 58]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 94]]
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC  [["user_id", 58]]
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 75]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 280]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 281]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 282]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 283]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 284]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?[0m  [["id", 75]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 58]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mTodoList Load (0.2ms)[0m  SELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles"
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "Fiorina"], ["password_digest", "ylrac"], ["created_at", "2016-03-10 08:03:12.319590"], ["updated_at", "2016-03-10 08:03:12.319590"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["gender", "female"], ["birth_year", 1954], ["first_name", "Carly"], ["last_name", "Fiorina"], ["created_at", "2016-03-10 08:03:12.322880"], ["updated_at", "2016-03-10 08:03:12.322880"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 59]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "profiles" SET "user_id" = ?, "updated_at" = ? WHERE "profiles"."id" = ?[0m  [["user_id", 59], ["updated_at", "2016-03-10 08:03:12.326775"], ["id", 95]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "The Fiorina List"], ["list_due_date", "2017-03-10"], ["user_id", 59], ["created_at", "2016-03-10 08:03:12.331713"], ["updated_at", "2016-03-10 08:03:12.331713"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 1"], ["description", "This is task 1"], ["completed", "f"], ["todo_list_id", 76], ["created_at", "2016-03-10 08:03:12.336453"], ["updated_at", "2016-03-10 08:03:12.336453"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 2"], ["description", "This is task 2"], ["completed", "f"], ["todo_list_id", 76], ["created_at", "2016-03-10 08:03:12.340397"], ["updated_at", "2016-03-10 08:03:12.340397"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 3"], ["description", "This is task 3"], ["completed", "f"], ["todo_list_id", 76], ["created_at", "2016-03-10 08:03:12.344927"], ["updated_at", "2016-03-10 08:03:12.344927"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 4"], ["description", "This is task 4"], ["completed", "f"], ["todo_list_id", 76], ["created_at", "2016-03-10 08:03:12.349260"], ["updated_at", "2016-03-10 08:03:12.349260"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 5"], ["description", "This is task 5"], ["completed", "f"], ["todo_list_id", 76], ["created_at", "2016-03-10 08:03:12.353499"], ["updated_at", "2016-03-10 08:03:12.353499"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "Trump"], ["password_digest", "dlanod"], ["created_at", "2016-03-10 08:03:12.357455"], ["updated_at", "2016-03-10 08:03:12.357455"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "profiles" ("gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["gender", "male"], ["birth_year", 1946], ["first_name", "Donald"], ["last_name", "Trump"], ["created_at", "2016-03-10 08:03:12.360650"], ["updated_at", "2016-03-10 08:03:12.360650"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 60]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "profiles" SET "user_id" = ?, "updated_at" = ? WHERE "profiles"."id" = ?[0m  [["user_id", 60], ["updated_at", "2016-03-10 08:03:12.364137"], ["id", 96]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "The Trump List"], ["list_due_date", "2017-03-10"], ["user_id", 60], ["created_at", "2016-03-10 08:03:12.368142"], ["updated_at", "2016-03-10 08:03:12.368142"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 1"], ["description", "This is task 1"], ["completed", "f"], ["todo_list_id", 77], ["created_at", "2016-03-10 08:03:12.373113"], ["updated_at", "2016-03-10 08:03:12.373113"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 2"], ["description", "This is task 2"], ["completed", "f"], ["todo_list_id", 77], ["created_at", "2016-03-10 08:03:12.378086"], ["updated_at", "2016-03-10 08:03:12.378086"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 3"], ["description", "This is task 3"], ["completed", "f"], ["todo_list_id", 77], ["created_at", "2016-03-10 08:03:12.383120"], ["updated_at", "2016-03-10 08:03:12.383120"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 4"], ["description", "This is task 4"], ["completed", "f"], ["todo_list_id", 77], ["created_at", "2016-03-10 08:03:12.387049"], ["updated_at", "2016-03-10 08:03:12.387049"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 5"], ["description", "This is task 5"], ["completed", "f"], ["todo_list_id", 77], ["created_at", "2016-03-10 08:03:12.391723"], ["updated_at", "2016-03-10 08:03:12.391723"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "Carson"], ["password_digest", "neb"], ["created_at", "2016-03-10 08:03:12.395222"], ["updated_at", "2016-03-10 08:03:12.395222"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "profiles" ("gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["gender", "male"], ["birth_year", 1951], ["first_name", "Ben"], ["last_name", "Carson"], ["created_at", "2016-03-10 08:03:12.398297"], ["updated_at", "2016-03-10 08:03:12.398297"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 61]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "profiles" SET "user_id" = ?, "updated_at" = ? WHERE "profiles"."id" = ?[0m  [["user_id", 61], ["updated_at", "2016-03-10 08:03:12.402081"], ["id", 97]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "The Carson List"], ["list_due_date", "2017-03-10"], ["user_id", 61], ["created_at", "2016-03-10 08:03:12.406637"], ["updated_at", "2016-03-10 08:03:12.406637"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 1"], ["description", "This is task 1"], ["completed", "f"], ["todo_list_id", 78], ["created_at", "2016-03-10 08:03:12.412637"], ["updated_at", "2016-03-10 08:03:12.412637"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 2"], ["description", "This is task 2"], ["completed", "f"], ["todo_list_id", 78], ["created_at", "2016-03-10 08:03:12.417068"], ["updated_at", "2016-03-10 08:03:12.417068"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 3"], ["description", "This is task 3"], ["completed", "f"], ["todo_list_id", 78], ["created_at", "2016-03-10 08:03:12.421305"], ["updated_at", "2016-03-10 08:03:12.421305"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 4"], ["description", "This is task 4"], ["completed", "f"], ["todo_list_id", 78], ["created_at", "2016-03-10 08:03:12.426404"], ["updated_at", "2016-03-10 08:03:12.426404"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 5"], ["description", "This is task 5"], ["completed", "f"], ["todo_list_id", 78], ["created_at", "2016-03-10 08:03:12.431651"], ["updated_at", "2016-03-10 08:03:12.431651"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "Clinton"], ["password_digest", "yrallih"], ["created_at", "2016-03-10 08:03:12.435150"], ["updated_at", "2016-03-10 08:03:12.435150"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["gender", "female"], ["birth_year", 1947], ["first_name", "Hillary"], ["last_name", "Clinton"], ["created_at", "2016-03-10 08:03:12.438454"], ["updated_at", "2016-03-10 08:03:12.438454"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 62]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "profiles" SET "user_id" = ?, "updated_at" = ? WHERE "profiles"."id" = ?[0m  [["user_id", 62], ["updated_at", "2016-03-10 08:03:12.442866"], ["id", 98]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "The Clinton List"], ["list_due_date", "2017-03-10"], ["user_id", 62], ["created_at", "2016-03-10 08:03:12.447266"], ["updated_at", "2016-03-10 08:03:12.447266"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 1"], ["description", "This is task 1"], ["completed", "f"], ["todo_list_id", 79], ["created_at", "2016-03-10 08:03:12.452558"], ["updated_at", "2016-03-10 08:03:12.452558"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 2"], ["description", "This is task 2"], ["completed", "f"], ["todo_list_id", 79], ["created_at", "2016-03-10 08:03:12.456878"], ["updated_at", "2016-03-10 08:03:12.456878"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 3"], ["description", "This is task 3"], ["completed", "f"], ["todo_list_id", 79], ["created_at", "2016-03-10 08:03:12.460983"], ["updated_at", "2016-03-10 08:03:12.460983"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 4"], ["description", "This is task 4"], ["completed", "f"], ["todo_list_id", 79], ["created_at", "2016-03-10 08:03:12.465693"], ["updated_at", "2016-03-10 08:03:12.465693"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 5"], ["description", "This is task 5"], ["completed", "f"], ["todo_list_id", 79], ["created_at", "2016-03-10 08:03:12.470664"], ["updated_at", "2016-03-10 08:03:12.470664"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 59]]
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 95]]
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC[0m  [["user_id", 59]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC  [["todo_list_id", 76]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 285]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 286]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 287]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 288]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 289]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 76]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 59]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 60]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 96]]
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC  [["user_id", 60]]
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 77]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 290]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 291]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 292]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 293]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 294]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?[0m  [["id", 77]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 60]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 61]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 97]]
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC[0m  [["user_id", 61]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC  [["todo_list_id", 78]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 295]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 296]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 297]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 298]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 299]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 78]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 61]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 62]]
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 98]]
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC  [["user_id", 62]]
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 79]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 300]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 301]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 302]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 303]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 304]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?[0m  [["id", 79]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 62]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mTodoList Load (0.2ms)[0m  SELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC
+  [1m[36mTodoItem Load (0.2ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC[0m
+  [1m[35mProfile Load (0.2ms)[0m  SELECT "profiles".* FROM "profiles"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mProfile Load (0.2ms)[0m  SELECT "profiles".* FROM "profiles"
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "Fiorina"], ["password_digest", "ylrac"], ["created_at", "2016-03-10 08:03:12.529043"], ["updated_at", "2016-03-10 08:03:12.529043"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["gender", "female"], ["birth_year", 1954], ["first_name", "Carly"], ["last_name", "Fiorina"], ["created_at", "2016-03-10 08:03:12.532455"], ["updated_at", "2016-03-10 08:03:12.532455"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 63]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "profiles" SET "user_id" = ?, "updated_at" = ? WHERE "profiles"."id" = ?[0m  [["user_id", 63], ["updated_at", "2016-03-10 08:03:12.536610"], ["id", 99]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "The Fiorina List"], ["list_due_date", "2017-03-10"], ["user_id", 63], ["created_at", "2016-03-10 08:03:12.542326"], ["updated_at", "2016-03-10 08:03:12.542326"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 1"], ["description", "This is task 1"], ["completed", "f"], ["todo_list_id", 80], ["created_at", "2016-03-10 08:03:12.547993"], ["updated_at", "2016-03-10 08:03:12.547993"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 2"], ["description", "This is task 2"], ["completed", "f"], ["todo_list_id", 80], ["created_at", "2016-03-10 08:03:12.552839"], ["updated_at", "2016-03-10 08:03:12.552839"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 3"], ["description", "This is task 3"], ["completed", "f"], ["todo_list_id", 80], ["created_at", "2016-03-10 08:03:12.558040"], ["updated_at", "2016-03-10 08:03:12.558040"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 4"], ["description", "This is task 4"], ["completed", "f"], ["todo_list_id", 80], ["created_at", "2016-03-10 08:03:12.562420"], ["updated_at", "2016-03-10 08:03:12.562420"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 5"], ["description", "This is task 5"], ["completed", "f"], ["todo_list_id", 80], ["created_at", "2016-03-10 08:03:12.566367"], ["updated_at", "2016-03-10 08:03:12.566367"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "Trump"], ["password_digest", "dlanod"], ["created_at", "2016-03-10 08:03:12.569783"], ["updated_at", "2016-03-10 08:03:12.569783"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["gender", "male"], ["birth_year", 1946], ["first_name", "Donald"], ["last_name", "Trump"], ["created_at", "2016-03-10 08:03:12.572821"], ["updated_at", "2016-03-10 08:03:12.572821"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 64]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "profiles" SET "user_id" = ?, "updated_at" = ? WHERE "profiles"."id" = ?[0m  [["user_id", 64], ["updated_at", "2016-03-10 08:03:12.576933"], ["id", 100]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "The Trump List"], ["list_due_date", "2017-03-10"], ["user_id", 64], ["created_at", "2016-03-10 08:03:12.580654"], ["updated_at", "2016-03-10 08:03:12.580654"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 1"], ["description", "This is task 1"], ["completed", "f"], ["todo_list_id", 81], ["created_at", "2016-03-10 08:03:12.585066"], ["updated_at", "2016-03-10 08:03:12.585066"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 2"], ["description", "This is task 2"], ["completed", "f"], ["todo_list_id", 81], ["created_at", "2016-03-10 08:03:12.589493"], ["updated_at", "2016-03-10 08:03:12.589493"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 3"], ["description", "This is task 3"], ["completed", "f"], ["todo_list_id", 81], ["created_at", "2016-03-10 08:03:12.593962"], ["updated_at", "2016-03-10 08:03:12.593962"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 4"], ["description", "This is task 4"], ["completed", "f"], ["todo_list_id", 81], ["created_at", "2016-03-10 08:03:12.598164"], ["updated_at", "2016-03-10 08:03:12.598164"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 5"], ["description", "This is task 5"], ["completed", "f"], ["todo_list_id", 81], ["created_at", "2016-03-10 08:03:12.602033"], ["updated_at", "2016-03-10 08:03:12.602033"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "Carson"], ["password_digest", "neb"], ["created_at", "2016-03-10 08:03:12.605631"], ["updated_at", "2016-03-10 08:03:12.605631"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["gender", "male"], ["birth_year", 1951], ["first_name", "Ben"], ["last_name", "Carson"], ["created_at", "2016-03-10 08:03:12.610026"], ["updated_at", "2016-03-10 08:03:12.610026"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 65]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "profiles" SET "user_id" = ?, "updated_at" = ? WHERE "profiles"."id" = ?[0m  [["user_id", 65], ["updated_at", "2016-03-10 08:03:12.614098"], ["id", 101]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "The Carson List"], ["list_due_date", "2017-03-10"], ["user_id", 65], ["created_at", "2016-03-10 08:03:12.618364"], ["updated_at", "2016-03-10 08:03:12.618364"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 1"], ["description", "This is task 1"], ["completed", "f"], ["todo_list_id", 82], ["created_at", "2016-03-10 08:03:12.623068"], ["updated_at", "2016-03-10 08:03:12.623068"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 2"], ["description", "This is task 2"], ["completed", "f"], ["todo_list_id", 82], ["created_at", "2016-03-10 08:03:12.627193"], ["updated_at", "2016-03-10 08:03:12.627193"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 3"], ["description", "This is task 3"], ["completed", "f"], ["todo_list_id", 82], ["created_at", "2016-03-10 08:03:12.632850"], ["updated_at", "2016-03-10 08:03:12.632850"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 4"], ["description", "This is task 4"], ["completed", "f"], ["todo_list_id", 82], ["created_at", "2016-03-10 08:03:12.636918"], ["updated_at", "2016-03-10 08:03:12.636918"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 5"], ["description", "This is task 5"], ["completed", "f"], ["todo_list_id", 82], ["created_at", "2016-03-10 08:03:12.641249"], ["updated_at", "2016-03-10 08:03:12.641249"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "Clinton"], ["password_digest", "yrallih"], ["created_at", "2016-03-10 08:03:12.645195"], ["updated_at", "2016-03-10 08:03:12.645195"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "profiles" ("gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["gender", "female"], ["birth_year", 1947], ["first_name", "Hillary"], ["last_name", "Clinton"], ["created_at", "2016-03-10 08:03:12.648113"], ["updated_at", "2016-03-10 08:03:12.648113"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 66]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "profiles" SET "user_id" = ?, "updated_at" = ? WHERE "profiles"."id" = ?[0m  [["user_id", 66], ["updated_at", "2016-03-10 08:03:12.651839"], ["id", 102]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "The Clinton List"], ["list_due_date", "2017-03-10"], ["user_id", 66], ["created_at", "2016-03-10 08:03:12.656877"], ["updated_at", "2016-03-10 08:03:12.656877"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 1"], ["description", "This is task 1"], ["completed", "f"], ["todo_list_id", 83], ["created_at", "2016-03-10 08:03:12.661874"], ["updated_at", "2016-03-10 08:03:12.661874"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 2"], ["description", "This is task 2"], ["completed", "f"], ["todo_list_id", 83], ["created_at", "2016-03-10 08:03:12.665640"], ["updated_at", "2016-03-10 08:03:12.665640"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 3"], ["description", "This is task 3"], ["completed", "f"], ["todo_list_id", 83], ["created_at", "2016-03-10 08:03:12.669937"], ["updated_at", "2016-03-10 08:03:12.669937"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 4"], ["description", "This is task 4"], ["completed", "f"], ["todo_list_id", 83], ["created_at", "2016-03-10 08:03:12.674685"], ["updated_at", "2016-03-10 08:03:12.674685"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 5"], ["description", "This is task 5"], ["completed", "f"], ["todo_list_id", 83], ["created_at", "2016-03-10 08:03:12.680026"], ["updated_at", "2016-03-10 08:03:12.680026"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles"[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."last_name" = ? LIMIT 1  [["last_name", "Fiorina"]]
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."last_name" = ? LIMIT 1[0m  [["last_name", "Trump"]]
+  [1m[35mProfile Load (0.1ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."last_name" = ? LIMIT 1  [["last_name", "Carson"]]
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."last_name" = ? LIMIT 1[0m  [["last_name", "Clinton"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 63]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 99]]
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC  [["user_id", 63]]
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 80]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 305]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 306]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 307]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 308]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 309]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?[0m  [["id", 80]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 63]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 64]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 100]]
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC[0m  [["user_id", 64]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC  [["todo_list_id", 81]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 310]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 311]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 312]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 313]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 314]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 81]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 64]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 65]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 101]]
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC  [["user_id", 65]]
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 82]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 315]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 316]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 317]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 318]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 319]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?[0m  [["id", 82]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 65]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 66]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 102]]
+  [1m[36mTodoList Load (0.0ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC[0m  [["user_id", 66]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC  [["todo_list_id", 83]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 320]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 321]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 322]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 323]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 324]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 83]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 66]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36mTodoList Load (0.2ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles"[0m
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Fiorina"], ["password_digest", "ylrac"], ["created_at", "2016-03-10 08:03:12.732433"], ["updated_at", "2016-03-10 08:03:12.732433"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "profiles" ("gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["gender", "female"], ["birth_year", 1954], ["first_name", "Carly"], ["last_name", "Fiorina"], ["created_at", "2016-03-10 08:03:12.735674"], ["updated_at", "2016-03-10 08:03:12.735674"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 67]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "profiles" SET "user_id" = ?, "updated_at" = ? WHERE "profiles"."id" = ?  [["user_id", 67], ["updated_at", "2016-03-10 08:03:12.739477"], ["id", 103]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "The Fiorina List"], ["list_due_date", "2017-03-10"], ["user_id", 67], ["created_at", "2016-03-10 08:03:12.745034"], ["updated_at", "2016-03-10 08:03:12.745034"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 1"], ["description", "This is task 1"], ["completed", "f"], ["todo_list_id", 84], ["created_at", "2016-03-10 08:03:12.749654"], ["updated_at", "2016-03-10 08:03:12.749654"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 2"], ["description", "This is task 2"], ["completed", "f"], ["todo_list_id", 84], ["created_at", "2016-03-10 08:03:12.753737"], ["updated_at", "2016-03-10 08:03:12.753737"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 3"], ["description", "This is task 3"], ["completed", "f"], ["todo_list_id", 84], ["created_at", "2016-03-10 08:03:12.758226"], ["updated_at", "2016-03-10 08:03:12.758226"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 4"], ["description", "This is task 4"], ["completed", "f"], ["todo_list_id", 84], ["created_at", "2016-03-10 08:03:12.762910"], ["updated_at", "2016-03-10 08:03:12.762910"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 5"], ["description", "This is task 5"], ["completed", "f"], ["todo_list_id", 84], ["created_at", "2016-03-10 08:03:12.767480"], ["updated_at", "2016-03-10 08:03:12.767480"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Trump"], ["password_digest", "dlanod"], ["created_at", "2016-03-10 08:03:12.770979"], ["updated_at", "2016-03-10 08:03:12.770979"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "profiles" ("gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["gender", "male"], ["birth_year", 1946], ["first_name", "Donald"], ["last_name", "Trump"], ["created_at", "2016-03-10 08:03:12.775603"], ["updated_at", "2016-03-10 08:03:12.775603"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 68]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "profiles" SET "user_id" = ?, "updated_at" = ? WHERE "profiles"."id" = ?  [["user_id", 68], ["updated_at", "2016-03-10 08:03:12.779826"], ["id", 104]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "The Trump List"], ["list_due_date", "2017-03-10"], ["user_id", 68], ["created_at", "2016-03-10 08:03:12.783550"], ["updated_at", "2016-03-10 08:03:12.783550"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 1"], ["description", "This is task 1"], ["completed", "f"], ["todo_list_id", 85], ["created_at", "2016-03-10 08:03:12.788515"], ["updated_at", "2016-03-10 08:03:12.788515"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 2"], ["description", "This is task 2"], ["completed", "f"], ["todo_list_id", 85], ["created_at", "2016-03-10 08:03:12.793027"], ["updated_at", "2016-03-10 08:03:12.793027"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 3"], ["description", "This is task 3"], ["completed", "f"], ["todo_list_id", 85], ["created_at", "2016-03-10 08:03:12.796918"], ["updated_at", "2016-03-10 08:03:12.796918"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 4"], ["description", "This is task 4"], ["completed", "f"], ["todo_list_id", 85], ["created_at", "2016-03-10 08:03:12.801103"], ["updated_at", "2016-03-10 08:03:12.801103"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 5"], ["description", "This is task 5"], ["completed", "f"], ["todo_list_id", 85], ["created_at", "2016-03-10 08:03:12.804913"], ["updated_at", "2016-03-10 08:03:12.804913"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Carson"], ["password_digest", "neb"], ["created_at", "2016-03-10 08:03:12.809261"], ["updated_at", "2016-03-10 08:03:12.809261"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "profiles" ("gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["gender", "male"], ["birth_year", 1951], ["first_name", "Ben"], ["last_name", "Carson"], ["created_at", "2016-03-10 08:03:12.813192"], ["updated_at", "2016-03-10 08:03:12.813192"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 69]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "profiles" SET "user_id" = ?, "updated_at" = ? WHERE "profiles"."id" = ?  [["user_id", 69], ["updated_at", "2016-03-10 08:03:12.817371"], ["id", 105]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "The Carson List"], ["list_due_date", "2017-03-10"], ["user_id", 69], ["created_at", "2016-03-10 08:03:12.821423"], ["updated_at", "2016-03-10 08:03:12.821423"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 1"], ["description", "This is task 1"], ["completed", "f"], ["todo_list_id", 86], ["created_at", "2016-03-10 08:03:12.827055"], ["updated_at", "2016-03-10 08:03:12.827055"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 2"], ["description", "This is task 2"], ["completed", "f"], ["todo_list_id", 86], ["created_at", "2016-03-10 08:03:12.831805"], ["updated_at", "2016-03-10 08:03:12.831805"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 3"], ["description", "This is task 3"], ["completed", "f"], ["todo_list_id", 86], ["created_at", "2016-03-10 08:03:12.836117"], ["updated_at", "2016-03-10 08:03:12.836117"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 4"], ["description", "This is task 4"], ["completed", "f"], ["todo_list_id", 86], ["created_at", "2016-03-10 08:03:12.841087"], ["updated_at", "2016-03-10 08:03:12.841087"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 5"], ["description", "This is task 5"], ["completed", "f"], ["todo_list_id", 86], ["created_at", "2016-03-10 08:03:12.845607"], ["updated_at", "2016-03-10 08:03:12.845607"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Clinton"], ["password_digest", "yrallih"], ["created_at", "2016-03-10 08:03:12.848683"], ["updated_at", "2016-03-10 08:03:12.848683"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "profiles" ("gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["gender", "female"], ["birth_year", 1947], ["first_name", "Hillary"], ["last_name", "Clinton"], ["created_at", "2016-03-10 08:03:12.851396"], ["updated_at", "2016-03-10 08:03:12.851396"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 70]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "profiles" SET "user_id" = ?, "updated_at" = ? WHERE "profiles"."id" = ?  [["user_id", 70], ["updated_at", "2016-03-10 08:03:12.856384"], ["id", 106]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "The Clinton List"], ["list_due_date", "2017-03-10"], ["user_id", 70], ["created_at", "2016-03-10 08:03:12.860450"], ["updated_at", "2016-03-10 08:03:12.860450"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 1"], ["description", "This is task 1"], ["completed", "f"], ["todo_list_id", 87], ["created_at", "2016-03-10 08:03:12.865329"], ["updated_at", "2016-03-10 08:03:12.865329"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 2"], ["description", "This is task 2"], ["completed", "f"], ["todo_list_id", 87], ["created_at", "2016-03-10 08:03:12.869696"], ["updated_at", "2016-03-10 08:03:12.869696"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 3"], ["description", "This is task 3"], ["completed", "f"], ["todo_list_id", 87], ["created_at", "2016-03-10 08:03:12.874178"], ["updated_at", "2016-03-10 08:03:12.874178"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 4"], ["description", "This is task 4"], ["completed", "f"], ["todo_list_id", 87], ["created_at", "2016-03-10 08:03:12.878438"], ["updated_at", "2016-03-10 08:03:12.878438"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 5"], ["description", "This is task 5"], ["completed", "f"], ["todo_list_id", 87], ["created_at", "2016-03-10 08:03:12.882273"], ["updated_at", "2016-03-10 08:03:12.882273"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mTodoList Load (0.2ms)[0m  SELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "Fiorina"]]
+  [1m[35mTodoList Load (0.2ms)[0m  SELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = 67  ORDER BY "todo_lists"."list_due_date" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "Trump"]]
+  [1m[35mTodoList Load (0.3ms)[0m  SELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = 68  ORDER BY "todo_lists"."list_due_date" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "Carson"]]
+  [1m[35mTodoList Load (0.2ms)[0m  SELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = 69  ORDER BY "todo_lists"."list_due_date" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "Clinton"]]
+  [1m[35mTodoList Load (0.3ms)[0m  SELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = 70  ORDER BY "todo_lists"."list_due_date" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 67]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 103]]
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC[0m  [["user_id", 67]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC  [["todo_list_id", 84]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 325]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 326]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 327]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 328]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 329]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 84]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 67]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 68]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 104]]
+  [1m[35mTodoList Load (0.0ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC  [["user_id", 68]]
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 85]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 330]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 331]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 332]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 333]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 334]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?[0m  [["id", 85]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 68]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 69]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 105]]
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC[0m  [["user_id", 69]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC  [["todo_list_id", 86]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 335]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 336]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 337]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 338]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 339]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 86]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 69]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProfile Load (0.2ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 70]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 106]]
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC  [["user_id", 70]]
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 87]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 340]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 341]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 342]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 343]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 344]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?[0m  [["id", 87]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 70]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles"
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "Fiorina"], ["password_digest", "ylrac"], ["created_at", "2016-03-10 08:03:12.951925"], ["updated_at", "2016-03-10 08:03:12.951925"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["gender", "female"], ["birth_year", 1954], ["first_name", "Carly"], ["last_name", "Fiorina"], ["created_at", "2016-03-10 08:03:12.955215"], ["updated_at", "2016-03-10 08:03:12.955215"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 71]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "profiles" SET "user_id" = ?, "updated_at" = ? WHERE "profiles"."id" = ?[0m  [["user_id", 71], ["updated_at", "2016-03-10 08:03:12.959426"], ["id", 107]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "The Fiorina List"], ["list_due_date", "2017-03-10"], ["user_id", 71], ["created_at", "2016-03-10 08:03:12.963726"], ["updated_at", "2016-03-10 08:03:12.963726"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 1"], ["description", "This is task 1"], ["completed", "f"], ["todo_list_id", 88], ["created_at", "2016-03-10 08:03:12.968966"], ["updated_at", "2016-03-10 08:03:12.968966"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 2"], ["description", "This is task 2"], ["completed", "f"], ["todo_list_id", 88], ["created_at", "2016-03-10 08:03:12.974207"], ["updated_at", "2016-03-10 08:03:12.974207"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 3"], ["description", "This is task 3"], ["completed", "f"], ["todo_list_id", 88], ["created_at", "2016-03-10 08:03:12.978603"], ["updated_at", "2016-03-10 08:03:12.978603"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 4"], ["description", "This is task 4"], ["completed", "f"], ["todo_list_id", 88], ["created_at", "2016-03-10 08:03:12.982657"], ["updated_at", "2016-03-10 08:03:12.982657"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 5"], ["description", "This is task 5"], ["completed", "f"], ["todo_list_id", 88], ["created_at", "2016-03-10 08:03:12.986877"], ["updated_at", "2016-03-10 08:03:12.986877"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "Trump"], ["password_digest", "dlanod"], ["created_at", "2016-03-10 08:03:12.990526"], ["updated_at", "2016-03-10 08:03:12.990526"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["gender", "male"], ["birth_year", 1946], ["first_name", "Donald"], ["last_name", "Trump"], ["created_at", "2016-03-10 08:03:12.993955"], ["updated_at", "2016-03-10 08:03:12.993955"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 72]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "profiles" SET "user_id" = ?, "updated_at" = ? WHERE "profiles"."id" = ?[0m  [["user_id", 72], ["updated_at", "2016-03-10 08:03:12.998127"], ["id", 108]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "The Trump List"], ["list_due_date", "2017-03-10"], ["user_id", 72], ["created_at", "2016-03-10 08:03:13.002633"], ["updated_at", "2016-03-10 08:03:13.002633"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 1"], ["description", "This is task 1"], ["completed", "f"], ["todo_list_id", 89], ["created_at", "2016-03-10 08:03:13.008871"], ["updated_at", "2016-03-10 08:03:13.008871"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 2"], ["description", "This is task 2"], ["completed", "f"], ["todo_list_id", 89], ["created_at", "2016-03-10 08:03:13.013836"], ["updated_at", "2016-03-10 08:03:13.013836"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 3"], ["description", "This is task 3"], ["completed", "f"], ["todo_list_id", 89], ["created_at", "2016-03-10 08:03:13.018711"], ["updated_at", "2016-03-10 08:03:13.018711"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 4"], ["description", "This is task 4"], ["completed", "f"], ["todo_list_id", 89], ["created_at", "2016-03-10 08:03:13.022964"], ["updated_at", "2016-03-10 08:03:13.022964"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 5"], ["description", "This is task 5"], ["completed", "f"], ["todo_list_id", 89], ["created_at", "2016-03-10 08:03:13.027549"], ["updated_at", "2016-03-10 08:03:13.027549"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "Carson"], ["password_digest", "neb"], ["created_at", "2016-03-10 08:03:13.030977"], ["updated_at", "2016-03-10 08:03:13.030977"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["gender", "male"], ["birth_year", 1951], ["first_name", "Ben"], ["last_name", "Carson"], ["created_at", "2016-03-10 08:03:13.033965"], ["updated_at", "2016-03-10 08:03:13.033965"]]
+  [1m[35m (9.0ms)[0m  commit transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 73]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "profiles" SET "user_id" = ?, "updated_at" = ? WHERE "profiles"."id" = ?[0m  [["user_id", 73], ["updated_at", "2016-03-10 08:03:13.045682"], ["id", 109]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "The Carson List"], ["list_due_date", "2017-03-10"], ["user_id", 73], ["created_at", "2016-03-10 08:03:13.049701"], ["updated_at", "2016-03-10 08:03:13.049701"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 1"], ["description", "This is task 1"], ["completed", "f"], ["todo_list_id", 90], ["created_at", "2016-03-10 08:03:13.054264"], ["updated_at", "2016-03-10 08:03:13.054264"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 2"], ["description", "This is task 2"], ["completed", "f"], ["todo_list_id", 90], ["created_at", "2016-03-10 08:03:13.059075"], ["updated_at", "2016-03-10 08:03:13.059075"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 3"], ["description", "This is task 3"], ["completed", "f"], ["todo_list_id", 90], ["created_at", "2016-03-10 08:03:13.062886"], ["updated_at", "2016-03-10 08:03:13.062886"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 4"], ["description", "This is task 4"], ["completed", "f"], ["todo_list_id", 90], ["created_at", "2016-03-10 08:03:13.067790"], ["updated_at", "2016-03-10 08:03:13.067790"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 5"], ["description", "This is task 5"], ["completed", "f"], ["todo_list_id", 90], ["created_at", "2016-03-10 08:03:13.072494"], ["updated_at", "2016-03-10 08:03:13.072494"]]
+  [1m[35m (44.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "Clinton"], ["password_digest", "yrallih"], ["created_at", "2016-03-10 08:03:13.118964"], ["updated_at", "2016-03-10 08:03:13.118964"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["gender", "female"], ["birth_year", 1947], ["first_name", "Hillary"], ["last_name", "Clinton"], ["created_at", "2016-03-10 08:03:13.122919"], ["updated_at", "2016-03-10 08:03:13.122919"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 74]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "profiles" SET "user_id" = ?, "updated_at" = ? WHERE "profiles"."id" = ?[0m  [["user_id", 74], ["updated_at", "2016-03-10 08:03:13.126667"], ["id", 110]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "The Clinton List"], ["list_due_date", "2017-03-10"], ["user_id", 74], ["created_at", "2016-03-10 08:03:13.130974"], ["updated_at", "2016-03-10 08:03:13.130974"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 1"], ["description", "This is task 1"], ["completed", "f"], ["todo_list_id", 91], ["created_at", "2016-03-10 08:03:13.136796"], ["updated_at", "2016-03-10 08:03:13.136796"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 2"], ["description", "This is task 2"], ["completed", "f"], ["todo_list_id", 91], ["created_at", "2016-03-10 08:03:13.142647"], ["updated_at", "2016-03-10 08:03:13.142647"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 3"], ["description", "This is task 3"], ["completed", "f"], ["todo_list_id", 91], ["created_at", "2016-03-10 08:03:13.147548"], ["updated_at", "2016-03-10 08:03:13.147548"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["due_date", "2017-03-10"], ["title", "Item 4"], ["description", "This is task 4"], ["completed", "f"], ["todo_list_id", 91], ["created_at", "2016-03-10 08:03:13.152072"], ["updated_at", "2016-03-10 08:03:13.152072"]]
+  [1m[36m (39.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "completed", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["due_date", "2017-03-10"], ["title", "Item 5"], ["description", "This is task 5"], ["completed", "f"], ["todo_list_id", 91], ["created_at", "2016-03-10 08:03:13.194083"], ["updated_at", "2016-03-10 08:03:13.194083"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mTodoItem Load (0.3ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "Fiorina"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" INNER JOIN "todo_lists" ON "todo_items"."todo_list_id" = "todo_lists"."id" WHERE "todo_lists"."user_id" = ?[0m  [["user_id", 71]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "Trump"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" INNER JOIN "todo_lists" ON "todo_items"."todo_list_id" = "todo_lists"."id" WHERE "todo_lists"."user_id" = ?[0m  [["user_id", 72]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "Carson"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" INNER JOIN "todo_lists" ON "todo_items"."todo_list_id" = "todo_lists"."id" WHERE "todo_lists"."user_id" = ?[0m  [["user_id", 73]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "Clinton"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" INNER JOIN "todo_lists" ON "todo_items"."todo_list_id" = "todo_lists"."id" WHERE "todo_lists"."user_id" = ?[0m  [["user_id", 74]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "testUser"], ["password_digest", "xxxx"], ["created_at", "2016-03-10 08:03:13.220532"], ["updated_at", "2016-03-10 08:03:13.220532"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "my list"], ["list_due_date", "2016-03-10"], ["user_id", 75], ["created_at", "2016-03-10 08:03:13.224066"], ["updated_at", "2016-03-10 08:03:13.224066"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["due_date", "2016-05-30"], ["title", "My Item 0"], ["description", "Item Details 0"], ["todo_list_id", 92], ["created_at", "2016-03-10 08:03:13.227545"], ["updated_at", "2016-03-10 08:03:13.227545"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["due_date", "2016-05-07"], ["title", "My Item 1"], ["description", "Item Details 1"], ["todo_list_id", 92], ["created_at", "2016-03-10 08:03:13.230982"], ["updated_at", "2016-03-10 08:03:13.230982"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["due_date", "2016-05-08"], ["title", "My Item 2"], ["description", "Item Details 2"], ["todo_list_id", 92], ["created_at", "2016-03-10 08:03:13.235245"], ["updated_at", "2016-03-10 08:03:13.235245"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["due_date", "2016-06-04"], ["title", "My Item 3"], ["description", "Item Details 3"], ["todo_list_id", 92], ["created_at", "2016-03-10 08:03:13.239387"], ["updated_at", "2016-03-10 08:03:13.239387"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["due_date", "2016-05-05"], ["title", "My Item 4"], ["description", "Item Details 4"], ["todo_list_id", 92], ["created_at", "2016-03-10 08:03:13.243551"], ["updated_at", "2016-03-10 08:03:13.243551"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["due_date", "2016-04-25"], ["title", "My Item 5"], ["description", "Item Details 5"], ["todo_list_id", 92], ["created_at", "2016-03-10 08:03:13.247380"], ["updated_at", "2016-03-10 08:03:13.247380"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["due_date", "2016-04-10"], ["title", "My Item 6"], ["description", "Item Details 6"], ["todo_list_id", 92], ["created_at", "2016-03-10 08:03:13.250697"], ["updated_at", "2016-03-10 08:03:13.250697"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["due_date", "2016-06-08"], ["title", "My Item 7"], ["description", "Item Details 7"], ["todo_list_id", 92], ["created_at", "2016-03-10 08:03:13.255086"], ["updated_at", "2016-03-10 08:03:13.255086"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["due_date", "2016-04-18"], ["title", "My Item 8"], ["description", "Item Details 8"], ["todo_list_id", 92], ["created_at", "2016-03-10 08:03:13.259651"], ["updated_at", "2016-03-10 08:03:13.259651"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["due_date", "2016-03-11"], ["title", "My Item 9"], ["description", "Item Details 9"], ["todo_list_id", 92], ["created_at", "2016-03-10 08:03:13.263814"], ["updated_at", "2016-03-10 08:03:13.263814"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["due_date", "2016-03-11"], ["title", "My Item 10"], ["description", "Item Details 10"], ["todo_list_id", 92], ["created_at", "2016-03-10 08:03:13.267729"], ["updated_at", "2016-03-10 08:03:13.267729"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["due_date", "2016-03-17"], ["title", "My Item 11"], ["description", "Item Details 11"], ["todo_list_id", 92], ["created_at", "2016-03-10 08:03:13.272357"], ["updated_at", "2016-03-10 08:03:13.272357"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["due_date", "2016-04-03"], ["title", "My Item 12"], ["description", "Item Details 12"], ["todo_list_id", 92], ["created_at", "2016-03-10 08:03:13.277011"], ["updated_at", "2016-03-10 08:03:13.277011"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["due_date", "2016-05-18"], ["title", "My Item 13"], ["description", "Item Details 13"], ["todo_list_id", 92], ["created_at", "2016-03-10 08:03:13.280534"], ["updated_at", "2016-03-10 08:03:13.280534"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["due_date", "2016-03-27"], ["title", "My Item 14"], ["description", "Item Details 14"], ["todo_list_id", 92], ["created_at", "2016-03-10 08:03:13.283814"], ["updated_at", "2016-03-10 08:03:13.283814"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["due_date", "2016-04-15"], ["title", "My Item 15"], ["description", "Item Details 15"], ["todo_list_id", 92], ["created_at", "2016-03-10 08:03:13.287045"], ["updated_at", "2016-03-10 08:03:13.287045"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["due_date", "2016-04-13"], ["title", "My Item 16"], ["description", "Item Details 16"], ["todo_list_id", 92], ["created_at", "2016-03-10 08:03:13.291135"], ["updated_at", "2016-03-10 08:03:13.291135"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["due_date", "2016-04-01"], ["title", "My Item 17"], ["description", "Item Details 17"], ["todo_list_id", 92], ["created_at", "2016-03-10 08:03:13.294527"], ["updated_at", "2016-03-10 08:03:13.294527"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["due_date", "2016-04-07"], ["title", "My Item 18"], ["description", "Item Details 18"], ["todo_list_id", 92], ["created_at", "2016-03-10 08:03:13.298028"], ["updated_at", "2016-03-10 08:03:13.298028"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["due_date", "2016-04-02"], ["title", "My Item 19"], ["description", "Item Details 19"], ["todo_list_id", 92], ["created_at", "2016-03-10 08:03:13.302056"], ["updated_at", "2016-03-10 08:03:13.302056"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["due_date", "2016-04-13"], ["title", "My Item 20"], ["description", "Item Details 20"], ["todo_list_id", 92], ["created_at", "2016-03-10 08:03:13.306336"], ["updated_at", "2016-03-10 08:03:13.306336"]]
+  [1m[35m (138.2ms)[0m  commit transaction
+  [1m[36mTodoItem Load (0.4ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "testUser"], ["password_digest", "xxxx"], ["created_at", "2016-03-10 08:03:13.450542"], ["updated_at", "2016-03-10 08:03:13.450542"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "my list 0"], ["list_due_date", "2016-05-22"], ["user_id", 76], ["created_at", "2016-03-10 08:03:13.453963"], ["updated_at", "2016-03-10 08:03:13.453963"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "my list 1"], ["list_due_date", "2016-04-22"], ["user_id", 76], ["created_at", "2016-03-10 08:03:13.458192"], ["updated_at", "2016-03-10 08:03:13.458192"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "my list 2"], ["list_due_date", "2016-03-22"], ["user_id", 76], ["created_at", "2016-03-10 08:03:13.463255"], ["updated_at", "2016-03-10 08:03:13.463255"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "my list 3"], ["list_due_date", "2016-04-08"], ["user_id", 76], ["created_at", "2016-03-10 08:03:13.468536"], ["updated_at", "2016-03-10 08:03:13.468536"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "my list 4"], ["list_due_date", "2016-03-21"], ["user_id", 76], ["created_at", "2016-03-10 08:03:13.473602"], ["updated_at", "2016-03-10 08:03:13.473602"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "my list 5"], ["list_due_date", "2016-05-31"], ["user_id", 76], ["created_at", "2016-03-10 08:03:13.478422"], ["updated_at", "2016-03-10 08:03:13.478422"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "my list 6"], ["list_due_date", "2016-04-27"], ["user_id", 76], ["created_at", "2016-03-10 08:03:13.482247"], ["updated_at", "2016-03-10 08:03:13.482247"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "my list 7"], ["list_due_date", "2016-04-11"], ["user_id", 76], ["created_at", "2016-03-10 08:03:13.487676"], ["updated_at", "2016-03-10 08:03:13.487676"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "my list 8"], ["list_due_date", "2016-03-29"], ["user_id", 76], ["created_at", "2016-03-10 08:03:13.493505"], ["updated_at", "2016-03-10 08:03:13.493505"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "my list 9"], ["list_due_date", "2016-06-02"], ["user_id", 76], ["created_at", "2016-03-10 08:03:13.497988"], ["updated_at", "2016-03-10 08:03:13.497988"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "my list 10"], ["list_due_date", "2016-06-01"], ["user_id", 76], ["created_at", "2016-03-10 08:03:13.502009"], ["updated_at", "2016-03-10 08:03:13.502009"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "my list 11"], ["list_due_date", "2016-04-13"], ["user_id", 76], ["created_at", "2016-03-10 08:03:13.507211"], ["updated_at", "2016-03-10 08:03:13.507211"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "my list 12"], ["list_due_date", "2016-05-25"], ["user_id", 76], ["created_at", "2016-03-10 08:03:13.512474"], ["updated_at", "2016-03-10 08:03:13.512474"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "my list 13"], ["list_due_date", "2016-04-13"], ["user_id", 76], ["created_at", "2016-03-10 08:03:13.516337"], ["updated_at", "2016-03-10 08:03:13.516337"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "my list 14"], ["list_due_date", "2016-04-08"], ["user_id", 76], ["created_at", "2016-03-10 08:03:13.520611"], ["updated_at", "2016-03-10 08:03:13.520611"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "my list 15"], ["list_due_date", "2016-05-10"], ["user_id", 76], ["created_at", "2016-03-10 08:03:13.524838"], ["updated_at", "2016-03-10 08:03:13.524838"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "my list 16"], ["list_due_date", "2016-05-21"], ["user_id", 76], ["created_at", "2016-03-10 08:03:13.529612"], ["updated_at", "2016-03-10 08:03:13.529612"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "my list 17"], ["list_due_date", "2016-04-08"], ["user_id", 76], ["created_at", "2016-03-10 08:03:13.534291"], ["updated_at", "2016-03-10 08:03:13.534291"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "my list 18"], ["list_due_date", "2016-03-19"], ["user_id", 76], ["created_at", "2016-03-10 08:03:13.539329"], ["updated_at", "2016-03-10 08:03:13.539329"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "my list 19"], ["list_due_date", "2016-05-26"], ["user_id", 76], ["created_at", "2016-03-10 08:03:13.542946"], ["updated_at", "2016-03-10 08:03:13.542946"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "my list 20"], ["list_due_date", "2016-04-15"], ["user_id", 76], ["created_at", "2016-03-10 08:03:13.546695"], ["updated_at", "2016-03-10 08:03:13.546695"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mTodoList Load (0.2ms)[0m  SELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 71]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 107]]
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC[0m  [["user_id", 71]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC  [["todo_list_id", 88]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 345]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 346]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 347]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 348]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 349]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 88]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 71]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 72]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 108]]
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC  [["user_id", 72]]
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 89]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 350]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 351]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 352]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 353]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 354]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?[0m  [["id", 89]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 72]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 73]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 109]]
+  [1m[36mTodoList Load (0.0ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC[0m  [["user_id", 73]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC  [["todo_list_id", 90]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 355]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 356]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 357]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 358]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 359]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 90]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 73]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 74]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "profiles" WHERE "profiles"."id" = ?[0m  [["id", 110]]
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC  [["user_id", 74]]
+  [1m[36mTodoItem Load (0.2ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 91]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 360]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 361]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 362]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 363]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 364]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?[0m  [["id", 91]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 74]]
+  [1m[36m (180.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 75]]
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC  [["user_id", 75]]
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 92]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 374]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 375]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 376]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 379]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 382]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 384]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 377]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 383]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 371]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 381]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 385]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 380]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 373]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 370]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 369]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 366]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 367]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 378]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 365]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 368]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 372]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?[0m  [["id", 92]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 75]]
+  [1m[36m (8.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 76]]
+  [1m[35mTodoList Load (0.2ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC  [["user_id", 76]]
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 111]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 111]]
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 97]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 97]]
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 95]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 95]]
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 101]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 101]]
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 96]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 96]]
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 107]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 107]]
+  [1m[36mTodoItem Load (0.0ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 110]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 110]]
+  [1m[36mTodoItem Load (0.0ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 100]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 100]]
+  [1m[36mTodoItem Load (0.0ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 104]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 104]]
+  [1m[36mTodoItem Load (0.0ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 106]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 106]]
+  [1m[36mTodoItem Load (0.0ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 113]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 113]]
+  [1m[36mTodoItem Load (0.0ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 94]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 94]]
+  [1m[36mTodoItem Load (0.0ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 99]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 99]]
+  [1m[36mTodoItem Load (0.0ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 108]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 108]]
+  [1m[36mTodoItem Load (0.0ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 109]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 109]]
+  [1m[36mTodoItem Load (0.0ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 93]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 93]]
+  [1m[36mTodoItem Load (0.0ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 105]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 105]]
+  [1m[36mTodoItem Load (0.0ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 112]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 112]]
+  [1m[36mTodoItem Load (0.0ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 98]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 98]]
+  [1m[36mTodoItem Load (0.0ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 103]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 103]]
+  [1m[36mTodoItem Load (0.0ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 102]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 102]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 76]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36mTodoList Load (0.2ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "testUser"], ["password_digest", "xxxx"], ["created_at", "2016-03-10 08:03:13.928417"], ["updated_at", "2016-03-10 08:03:13.928417"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "profiles" ("first_name", "last_name", "birth_year", "gender", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "Joe"], ["last_name", "Smith"], ["birth_year", 2000], ["gender", "male"], ["user_id", 77], ["created_at", "2016-03-10 08:03:13.931501"], ["updated_at", "2016-03-10 08:03:13.931501"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "my list"], ["list_due_date", "2016-03-10"], ["user_id", 77], ["created_at", "2016-03-10 08:03:13.935174"], ["updated_at", "2016-03-10 08:03:13.935174"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["due_date", "2016-03-10"], ["title", "My Item"], ["description", "Item Details"], ["todo_list_id", 114], ["created_at", "2016-03-10 08:03:13.939200"], ["updated_at", "2016-03-10 08:03:13.939200"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 77]]
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", 111]]
+  [1m[35mTodoList Load (0.2ms)[0m  SELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ?  ORDER BY "todo_lists"."list_due_date" ASC LIMIT 1  [["id", 114]]
+  [1m[36mTodoItem Load (0.2ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ?  ORDER BY "todo_items"."due_date" ASC LIMIT 1[0m  [["id", 386]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 77]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "profiles" WHERE "profiles"."id" = ?  [["id", 111]]
+  [1m[36mTodoList Load (0.0ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC[0m  [["user_id", 77]]
+  [1m[35mTodoItem Load (0.0ms)[0m  SELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC  [["todo_list_id", 114]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 386]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 114]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 77]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 77]]
+  [1m[35mProfile Load (0.1ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", 111]]
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ?  ORDER BY "todo_lists"."list_due_date" ASC LIMIT 1[0m  [["id", 114]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ?  ORDER BY "todo_items"."due_date" ASC LIMIT 1  [["id", 386]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC
+  [1m[36mTodoItem Load (0.2ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["username", "testUser"], ["password_digest", "xxxx"], ["created_at", "2016-03-10 08:03:13.957873"], ["updated_at", "2016-03-10 08:03:13.957873"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "my list 1"], ["list_due_date", "2016-03-10"], ["user_id", 78], ["created_at", "2016-03-10 08:03:13.963232"], ["updated_at", "2016-03-10 08:03:13.963232"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "todo_lists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "my list 2"], ["list_due_date", "2016-03-10"], ["user_id", 78], ["created_at", "2016-03-10 08:03:13.968524"], ["updated_at", "2016-03-10 08:03:13.968524"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["completed", "f"], ["due_date", "2016-03-10"], ["title", "My List 1 Item 0"], ["description", "Item Details 0"], ["todo_list_id", 115], ["created_at", "2016-03-10 08:03:13.977047"], ["updated_at", "2016-03-10 08:03:13.977047"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["completed", "t"], ["due_date", "2016-03-10"], ["title", "My List 2 Item 0"], ["description", "Item Details 0"], ["todo_list_id", 116], ["created_at", "2016-03-10 08:03:13.980883"], ["updated_at", "2016-03-10 08:03:13.980883"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["completed", "t"], ["due_date", "2016-03-10"], ["title", "My List 1 Item 1"], ["description", "Item Details 1"], ["todo_list_id", 115], ["created_at", "2016-03-10 08:03:13.984079"], ["updated_at", "2016-03-10 08:03:13.984079"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["completed", "f"], ["due_date", "2016-03-10"], ["title", "My List 2 Item 1"], ["description", "Item Details 1"], ["todo_list_id", 116], ["created_at", "2016-03-10 08:03:13.989039"], ["updated_at", "2016-03-10 08:03:13.989039"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["completed", "f"], ["due_date", "2016-03-10"], ["title", "My List 1 Item 2"], ["description", "Item Details 2"], ["todo_list_id", 115], ["created_at", "2016-03-10 08:03:13.993820"], ["updated_at", "2016-03-10 08:03:13.993820"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["completed", "f"], ["due_date", "2016-03-10"], ["title", "My List 2 Item 2"], ["description", "Item Details 2"], ["todo_list_id", 116], ["created_at", "2016-03-10 08:03:13.997786"], ["updated_at", "2016-03-10 08:03:13.997786"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["completed", "t"], ["due_date", "2016-03-10"], ["title", "My List 1 Item 3"], ["description", "Item Details 3"], ["todo_list_id", 115], ["created_at", "2016-03-10 08:03:14.001717"], ["updated_at", "2016-03-10 08:03:14.001717"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["completed", "t"], ["due_date", "2016-03-10"], ["title", "My List 2 Item 3"], ["description", "Item Details 3"], ["todo_list_id", 116], ["created_at", "2016-03-10 08:03:14.005416"], ["updated_at", "2016-03-10 08:03:14.005416"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["completed", "t"], ["due_date", "2016-03-10"], ["title", "My List 1 Item 4"], ["description", "Item Details 4"], ["todo_list_id", 115], ["created_at", "2016-03-10 08:03:14.008808"], ["updated_at", "2016-03-10 08:03:14.008808"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["completed", "t"], ["due_date", "2016-03-10"], ["title", "My List 2 Item 4"], ["description", "Item Details 4"], ["todo_list_id", 116], ["created_at", "2016-03-10 08:03:14.011989"], ["updated_at", "2016-03-10 08:03:14.011989"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["completed", "f"], ["due_date", "2016-03-10"], ["title", "My List 1 Item 5"], ["description", "Item Details 5"], ["todo_list_id", 115], ["created_at", "2016-03-10 08:03:14.015377"], ["updated_at", "2016-03-10 08:03:14.015377"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["completed", "t"], ["due_date", "2016-03-10"], ["title", "My List 2 Item 5"], ["description", "Item Details 5"], ["todo_list_id", 116], ["created_at", "2016-03-10 08:03:14.018878"], ["updated_at", "2016-03-10 08:03:14.018878"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["completed", "f"], ["due_date", "2016-03-10"], ["title", "My List 1 Item 6"], ["description", "Item Details 6"], ["todo_list_id", 115], ["created_at", "2016-03-10 08:03:14.022833"], ["updated_at", "2016-03-10 08:03:14.022833"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["completed", "t"], ["due_date", "2016-03-10"], ["title", "My List 2 Item 6"], ["description", "Item Details 6"], ["todo_list_id", 116], ["created_at", "2016-03-10 08:03:14.026394"], ["updated_at", "2016-03-10 08:03:14.026394"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["completed", "f"], ["due_date", "2016-03-10"], ["title", "My List 1 Item 7"], ["description", "Item Details 7"], ["todo_list_id", 115], ["created_at", "2016-03-10 08:03:14.029705"], ["updated_at", "2016-03-10 08:03:14.029705"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["completed", "t"], ["due_date", "2016-03-10"], ["title", "My List 2 Item 7"], ["description", "Item Details 7"], ["todo_list_id", 116], ["created_at", "2016-03-10 08:03:14.033743"], ["updated_at", "2016-03-10 08:03:14.033743"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["completed", "t"], ["due_date", "2016-03-10"], ["title", "My List 1 Item 8"], ["description", "Item Details 8"], ["todo_list_id", 115], ["created_at", "2016-03-10 08:03:14.038013"], ["updated_at", "2016-03-10 08:03:14.038013"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["completed", "f"], ["due_date", "2016-03-10"], ["title", "My List 2 Item 8"], ["description", "Item Details 8"], ["todo_list_id", 116], ["created_at", "2016-03-10 08:03:14.042064"], ["updated_at", "2016-03-10 08:03:14.042064"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["completed", "f"], ["due_date", "2016-03-10"], ["title", "My List 1 Item 9"], ["description", "Item Details 9"], ["todo_list_id", 115], ["created_at", "2016-03-10 08:03:14.045270"], ["updated_at", "2016-03-10 08:03:14.045270"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["completed", "f"], ["due_date", "2016-03-10"], ["title", "My List 2 Item 9"], ["description", "Item Details 9"], ["todo_list_id", 116], ["created_at", "2016-03-10 08:03:14.048774"], ["updated_at", "2016-03-10 08:03:14.048774"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["completed", "f"], ["due_date", "2016-03-10"], ["title", "My List 1 Item 10"], ["description", "Item Details 10"], ["todo_list_id", 115], ["created_at", "2016-03-10 08:03:14.053263"], ["updated_at", "2016-03-10 08:03:14.053263"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "todo_items" ("completed", "due_date", "title", "description", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["completed", "f"], ["due_date", "2016-03-10"], ["title", "My List 2 Item 10"], ["description", "Item Details 10"], ["todo_list_id", 116], ["created_at", "2016-03-10 08:03:14.057272"], ["updated_at", "2016-03-10 08:03:14.057272"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "todo_items" INNER JOIN "todo_lists" ON "todo_items"."todo_list_id" = "todo_lists"."id" WHERE "todo_lists"."user_id" = ? AND "todo_items"."completed" = ?  [["user_id", 78], ["completed", "t"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 78]]
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = ?  ORDER BY "todo_lists"."list_due_date" ASC  [["user_id", 78]]
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC[0m  [["todo_list_id", 115]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 387]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 389]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 391]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 393]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 395]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 397]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 399]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 401]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 403]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 405]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 407]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?[0m  [["id", 115]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  ORDER BY "todo_items"."due_date" ASC  [["todo_list_id", 116]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 388]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 390]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 392]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 394]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 396]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 398]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 400]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 402]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 404]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 406]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 408]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_lists" WHERE "todo_lists"."id" = ?  [["id", 116]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 78]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"  ORDER BY "todo_lists"."list_due_date" ASC[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."due_date" ASC
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "testUser"], ["password_digest", "xxxx"], ["created_at", "2016-03-10 08:03:14.086684"], ["updated_at", "2016-03-10 08:03:14.086684"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 79], ["gender", "male"], ["birth_year", 1985], ["first_name", "User 0"], ["last_name", "Smith0"], ["created_at", "2016-03-10 08:03:14.090654"], ["updated_at", "2016-03-10 08:03:14.090654"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 79], ["gender", "male"], ["birth_year", 1984], ["first_name", "User 1"], ["last_name", "Smith1"], ["created_at", "2016-03-10 08:03:14.094419"], ["updated_at", "2016-03-10 08:03:14.094419"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 79], ["gender", "male"], ["birth_year", 1989], ["first_name", "User 2"], ["last_name", "Smith2"], ["created_at", "2016-03-10 08:03:14.099040"], ["updated_at", "2016-03-10 08:03:14.099040"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 79], ["gender", "male"], ["birth_year", 1998], ["first_name", "User 3"], ["last_name", "Smith3"], ["created_at", "2016-03-10 08:03:14.103057"], ["updated_at", "2016-03-10 08:03:14.103057"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 79], ["gender", "male"], ["birth_year", 2000], ["first_name", "User 4"], ["last_name", "Smith4"], ["created_at", "2016-03-10 08:03:14.106997"], ["updated_at", "2016-03-10 08:03:14.106997"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 79], ["gender", "male"], ["birth_year", 1971], ["first_name", "User 5"], ["last_name", "Smith5"], ["created_at", "2016-03-10 08:03:14.110200"], ["updated_at", "2016-03-10 08:03:14.110200"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 79], ["gender", "male"], ["birth_year", 1978], ["first_name", "User 6"], ["last_name", "Smith6"], ["created_at", "2016-03-10 08:03:14.113177"], ["updated_at", "2016-03-10 08:03:14.113177"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 79], ["gender", "male"], ["birth_year", 1965], ["first_name", "User 7"], ["last_name", "Smith7"], ["created_at", "2016-03-10 08:03:14.116271"], ["updated_at", "2016-03-10 08:03:14.116271"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 79], ["gender", "male"], ["birth_year", 1988], ["first_name", "User 8"], ["last_name", "Smith8"], ["created_at", "2016-03-10 08:03:14.120632"], ["updated_at", "2016-03-10 08:03:14.120632"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 79], ["gender", "male"], ["birth_year", 1988], ["first_name", "User 9"], ["last_name", "Smith9"], ["created_at", "2016-03-10 08:03:14.126083"], ["updated_at", "2016-03-10 08:03:14.126083"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 79], ["gender", "male"], ["birth_year", 1975], ["first_name", "User 10"], ["last_name", "Smith10"], ["created_at", "2016-03-10 08:03:14.130923"], ["updated_at", "2016-03-10 08:03:14.130923"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 79], ["gender", "male"], ["birth_year", 1960], ["first_name", "User 11"], ["last_name", "Smith11"], ["created_at", "2016-03-10 08:03:14.134192"], ["updated_at", "2016-03-10 08:03:14.134192"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 79], ["gender", "male"], ["birth_year", 1970], ["first_name", "User 12"], ["last_name", "Smith12"], ["created_at", "2016-03-10 08:03:14.137133"], ["updated_at", "2016-03-10 08:03:14.137133"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 79], ["gender", "male"], ["birth_year", 1990], ["first_name", "User 13"], ["last_name", "Smith13"], ["created_at", "2016-03-10 08:03:14.140708"], ["updated_at", "2016-03-10 08:03:14.140708"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 79], ["gender", "male"], ["birth_year", 1968], ["first_name", "User 14"], ["last_name", "Smith14"], ["created_at", "2016-03-10 08:03:14.144238"], ["updated_at", "2016-03-10 08:03:14.144238"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 79], ["gender", "male"], ["birth_year", 1982], ["first_name", "User 15"], ["last_name", "Smith15"], ["created_at", "2016-03-10 08:03:14.148057"], ["updated_at", "2016-03-10 08:03:14.148057"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 79], ["gender", "male"], ["birth_year", 1965], ["first_name", "User 16"], ["last_name", "Smith16"], ["created_at", "2016-03-10 08:03:14.151674"], ["updated_at", "2016-03-10 08:03:14.151674"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 79], ["gender", "male"], ["birth_year", 2000], ["first_name", "User 17"], ["last_name", "Smith17"], ["created_at", "2016-03-10 08:03:14.156088"], ["updated_at", "2016-03-10 08:03:14.156088"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 79], ["gender", "male"], ["birth_year", 1962], ["first_name", "User 18"], ["last_name", "Smith18"], ["created_at", "2016-03-10 08:03:14.159429"], ["updated_at", "2016-03-10 08:03:14.159429"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 79], ["gender", "male"], ["birth_year", 1978], ["first_name", "User 19"], ["last_name", "Smith19"], ["created_at", "2016-03-10 08:03:14.162835"], ["updated_at", "2016-03-10 08:03:14.162835"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "profiles" ("user_id", "gender", "birth_year", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 79], ["gender", "male"], ["birth_year", 1979], ["first_name", "User 20"], ["last_name", "Smith20"], ["created_at", "2016-03-10 08:03:14.166503"], ["updated_at", "2016-03-10 08:03:14.166503"]]
+  [1m[36m (24.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mProfile Load (0.3ms)[0m  SELECT "profiles".* FROM "profiles" WHERE (birth_year BETWEEN 1960 AND 1985)  ORDER BY "profiles"."birth_year" ASC
